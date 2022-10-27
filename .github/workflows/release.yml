@@ -1,0 +1,21 @@
+name: Release to NuGet
+
+on:
+  release:
+    types: [published]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v1
+    - name: Build
+      run: dotnet build -c Release
+    - name: Pack nugets
+      run: ./NugetSpecs/nuget pack NugetSpecs/Microsoft.Dynamics365.UIAutomation.net6.Api.9.0.0.0.nuspec  -prop configuration=release -BasePath Microsoft.Dynamics365.UIAutomation.Api\
+    - name: Push to NuGet
+      run: dotnet nuget push "**/*.nupkg" --api-key ${{secrets.nuget_api_key}} --source https://api.nuget.org/v3/index.json

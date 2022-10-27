@@ -16,6 +16,6 @@ jobs:
     - name: Build
       run: dotnet build -c Release
     - name: Pack nugets
-      run: cd NugetSpecs && nuget pack Microsoft.Dynamics365.UIAutomation.net6.Api.9.0.0.0.nuspec  -prop configuration=release -BasePath ../Microsoft.Dynamics365.UIAutomation.Api/ -version ${{ github.ref_name }}
+      run: cd NugetSpecs && nuget pack Microsoft.Dynamics365.UIAutomation.net6.Api.9.0.0.0.nuspec  -prop configuration=release -BasePath ../Microsoft.Dynamics365.UIAutomation.Api.UCI/ -version ${{ github.ref_name }}
     - name: Push to NuGet
       run: dotnet nuget push "**/*.nupkg" --api-key ${{secrets.nuget_api_key}} --source https://api.nuget.org/v3/index.json

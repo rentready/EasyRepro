@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>lnetrebskii.Dynamics365.UIAutomation.net6.Api</id>
+    <id>RentReady.Dynamics365.UIAutomation.net6.Api</id>
     <version>9.0.0.1</version>
     <title>Automated UI testing API (NET 6) for •Microsoft Dynamics 365 Online Version 9.0 (9.0.x) (DB 9.0.x) online</title>
     <authors>Ranger Team</authors>

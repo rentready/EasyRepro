@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>RentReady.Dynamics365.UIAutomation.net6.Api</id>
+    <id>RentReady.Dynamics365.UIAutomation.Api</id>
     <version>9.0.0.1</version>
-    <title>Automated UI testing API (NET 6) for •Microsoft Dynamics 365 Online Version 9.0 (9.0.x) (DB 9.0.x) online</title>
+    <title>Automated UI testing API (NET 6, .NET 3.1, .NET 4.6.2) for •Microsoft Dynamics 365 Online Version 9.0 (9.0.x) (DB 9.0.x) online</title>
     <authors>Rent Ready Engineering Team, MS Ranger Team</authors>
     <owners>Rent Ready</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -23,8 +23,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\net6.0\Microsoft.Dynamics365.UIAutomation.Api.dll" target="lib\net6\Microsoft.Dynamics365.UIAutomation.Api.dll" />
-    <file src="bin\Release\net6.0\Microsoft.Dynamics365.UIAutomation.Browser.dll" target="lib\net6\Microsoft.Dynamics365.UIAutomation.Browser.dll" />
-    <file src="bin\Release\net6.0\Microsoft.Dynamics365.UIAutomation.Api.UCI.dll" target="lib\net6\Microsoft.Dynamics365.UIAutomation.Api.UCI.dll" />
+    <file src="bin\Release\**\Microsoft.Dynamics365.UIAutomation.*.dll" target="lib" />
   </files>
 </package>
